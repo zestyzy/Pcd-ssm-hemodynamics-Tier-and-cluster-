@@ -30,7 +30,7 @@ This approach reduces per-case CFD computation by ~**65×** while maintaining **
 ## 🧩 Workflow
 
 <p align="center">
-  <img src="docs/figures/workflow_figs.png" alt="Workflow" width="80%">
+  <img src="docs/figures/paper_02.png" alt="Workflow" width="80%">
 </p>
 
 1. **Data preprocessing**  
