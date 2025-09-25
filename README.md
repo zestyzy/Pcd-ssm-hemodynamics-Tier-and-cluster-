@@ -32,7 +32,7 @@ This repository provides a **tier-and-cluster generalization framework** integra
 ### Tiered population paradigm — **Fig.1**
 
 <p align="center">
-  <img src="docs/figures/fig1_tier_paradigm.png" width="80%" alt="Tier-based paradigm">
+  <img src="docs/figures/fig1.png" width="80%" alt="Tier-based paradigm">
 </p>
 
 Our study defines three cohort levels:
@@ -45,7 +45,7 @@ Our study defines three cohort levels:
 ### Proposed workflow — **Fig.2**
 
 <p align="center">
-  <img src="docs/figures/fig2_workflow.png" width="90%" alt="Workflow">
+  <img src="docs/figures/fig2.png" width="90%" alt="Workflow">
 </p>
 
 The full pipeline integrates:
@@ -61,7 +61,7 @@ The full pipeline integrates:
 ### CFD pipeline — **Fig.6**
 
 <p align="center">
-  <img src="docs/figures/fig6_cfd_pipeline.png" width="90%" alt="CFD workflow">
+  <img src="docs/figures/fig3.png" width="90%" alt="CFD workflow">
 </p>
 
 We run **steady-state CFD** with:
@@ -74,7 +74,7 @@ We run **steady-state CFD** with:
 ### Clustering results — **Fig.9**
 
 <p align="center">
-  <img src="docs/figures/fig9_clustering_results.png" width="90%" alt="Clustering results">
+  <img src="docs/figures/fig4.png" width="90%" alt="Clustering results">
 </p>
 
 - Pcd-SSM produced **two robust clusters** with 66.7% data participation.  
@@ -86,7 +86,7 @@ We run **steady-state CFD** with:
 ### Section-wise hemodynamic validation — **Fig.11**
 
 <p align="center">
-  <img src="docs/figures/fig11_section_analysis.png" width="90%" alt="Section analysis">
+  <img src="docs/figures/fig5.png" width="90%" alt="Section analysis">
 </p>
 
 - Red = Pcd-SSM cluster mean model  
@@ -99,7 +99,7 @@ We run **steady-state CFD** with:
 ### Normal vs stenosed flow fields — **Fig.12**
 
 <p align="center">
-  <img src="docs/figures/fig12_normal_vs_stenosis.png" width="90%" alt="Normal vs stenosis">
+  <img src="docs/figures/fig6.png" width="90%" alt="Normal vs stenosis">
 </p>
 
 - Stenotic cluster: higher velocity peaks (0.88 m/s), sharper pressure drop, and WSS elevation.  
