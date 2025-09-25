@@ -32,38 +32,78 @@ This repository provides a **tier-and-cluster generalization framework** integra
 ### Tiered population paradigm — **Fig.1**
 
 <p align="center">
-  <img src="docs/figures/fig1.png" width="80%" alt="Tier-based paradigm">
+  <img src="docs/figures/fig1_tier_paradigm.png" width="80%" alt="Tier-based paradigm">
 </p>
+
+Our study defines three cohort levels:
+- **Tier 1:** N ≤ Ncrit (global mean model feasible)  
+- **Tier 2:** Ncrit < N < 10³ (high shape heterogeneity, computationally heavy)  
+- **Tier 3:** N ≥ 10³ (large-scale, often simplified cylinders)
+
+---
 
 ### Proposed workflow — **Fig.2**
 
 <p align="center">
-  <img src="docs/figures/fig2.png" width="90%" alt="Workflow">
+  <img src="docs/figures/fig2_workflow.png" width="90%" alt="Workflow">
 </p>
+
+The full pipeline integrates:
+1. TOF-MRA data preprocessing & vessel reconstruction  
+2. **Point2SSM** training for unsupervised point correspondence  
+3. **Pcd-SSM + PCA** to compress shape space  
+4. **HDBSCAN clustering** to identify geometric subtypes  
+5. **Cluster mean model** generation  
+6. CFD simulation & statistical validation
+
+---
 
 ### CFD pipeline — **Fig.6**
 
 <p align="center">
-  <img src="docs/figures/fig3.png" width="90%" alt="CFD workflow">
+  <img src="docs/figures/fig6_cfd_pipeline.png" width="90%" alt="CFD workflow">
 </p>
+
+We run **steady-state CFD** with:
+- Carreau non-Newtonian blood model  
+- Velocity inlet (0.45 m/s), zero-pressure outlet  
+- ANSYS Fluent 2022 R2 (coupled solver, residual < 1e-5)
+
+---
 
 ### Clustering results — **Fig.9**
 
 <p align="center">
-  <img src="docs/figures/fig4.png" width="90%" alt="Clustering results">
+  <img src="docs/figures/fig9_clustering_results.png" width="90%" alt="Clustering results">
 </p>
+
+- Pcd-SSM produced **two robust clusters** with 66.7% data participation.  
+- Traditional mesh-based SSM had more noise (only 43.3% clustered).  
+- Pcd-SSM clusters clearly separate normal vs stenotic ICA morphologies.
+
+---
 
 ### Section-wise hemodynamic validation — **Fig.11**
 
 <p align="center">
-  <img src="docs/figures/fig5.png" width="90%" alt="Section analysis">
+  <img src="docs/figures/fig11_section_analysis.png" width="90%" alt="Section analysis">
 </p>
+
+- Red = Pcd-SSM cluster mean model  
+- Blue = ideal cylindrical model  
+- Boxplots = individual CFD results  
+- Pcd-SSM nearly overlaps with individual median curves for WSS & pressure.
+
+---
 
 ### Normal vs stenosed flow fields — **Fig.12**
 
 <p align="center">
-  <img src="docs/figures/fig6.png" width="90%" alt="Normal vs stenosis">
+  <img src="docs/figures/fig12_normal_vs_stenosis.png" width="90%" alt="Normal vs stenosis">
 </p>
+
+- Stenotic cluster: higher velocity peaks (0.88 m/s), sharper pressure drop, and WSS elevation.  
+- Normal cluster: smoother velocity and pressure distribution.
 
 ---
 
